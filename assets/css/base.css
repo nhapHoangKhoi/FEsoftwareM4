@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+:root
+{
+   --color-main: #1B2026;
+   --color-highlight: #F7D9C4;
+   --color-text: #777777;
+   --color-background-light-gray: #EFEFEF;
+   --color-background-light-black: #31363B;
+   --color-background-light-ocean: #DCE8EB;
+   --color-background-dark-black: #14191E;
+
+   /* --color-main: #1B2026; */
+   --color-dark-highlight: #e3c9b6;
+   --color-dark-text-white: rgb(243, 244, 246);
+   --color-dark-text-light: #8b8b8b;
+   --color-dark-background: rgb(17, 24, 39);
+   /* --color-background-light-black: #31363B; */
+   /* --color-background-light-ocean: #DCE8EB; */
+   /* --color-background-dark-black: #14191E; */
+   
+   --font-text: "DM Sans", sans-serif;
+}
+
+body
+{
+   font-family: var(--font-text);
+   /* line-height: 1.5; */
+}
+
+a
+{
+   /* bo di dau gach chan o cac the <a> */
+   text-decoration: none; 
+}
+
+/* Container */
+
+.container
+{
+   max-width: 1140px;
+   /* background: yellow; */
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/* man hinh nho hon 1200 */
+@media (max-width: 1199.98px)
+{
+   .container
+   {
+      max-width: 960px;
+   }
+}
+
+/* man hinh nho hon 992 */
+@media (max-width: 991.98px)
+{
+   .container
+   {
+      max-width: 720px;
+   }
+}
+
+/* man hinh nho hon 768 */
+@media (max-width: 767.98px)
+{
+   .container
+   {
+      max-width: 540px;
+   }
+}
+
+/* man hinh nho hon 576 */
+@media (max-width: 575.98px)
+{
+   .container
+   {
+      max-width: 100%;
+      padding: 0 15px;
+   }
+}
+
+/* End container */
+
+
+/* button */
+
+.button
+{
+   display: inline-block;
+   background: gray;
+   color: #fff;
+   padding: 15px 30px;
+   border-radius: 5px;
+   font-size: 16px;
+   font-weight: 600;
+   border: 2px solid gray;
+}
+
+.button.button-highlight
+{
+   background: var(--color-highlight);
+   color: #000;
+   border-color: var(--color-highlight);
+}
+
+.button.button-highlight:hover
+{
+   background: #fff;
+   border-color: #fff;
+}
+
+.button.button-outline-highlight
+{
+   background: transparent;
+   color: #fff;
+   border-color: #464646;
+}
+
+.button.button-outline-highlight:hover
+{
+   background: var(--color-highlight);
+   color: #000;
+   border-color: var(--color-highlight);
+}
+
+.button.button-black
+{
+   background: #000;
+   color: #fff;
+   border-color: #000;
+}
+
+.button.button-black:hover
+{
+   background: var(--color-highlight);
+   color: #000;
+   border-color: var(--color-highlight);
+}
+
+/* nho hon 576 */
+@media (max-width: 575.98px)
+{
+   .button
+   {
+      font-size: 14px;
+   }
+}
+
+/* End button */
+
+
+/* switch */
+
+.switch 
+{
+   width: 70px;
+   height: 34px;
+   border-radius: 45px;
+   overflow: hidden;
+   
+   position: relative;
+}
+
+.switch input 
+{ 
+   display: none;
+}
+
+.switch .switch-slider 
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #ccc;
+
+   display: flex;
+   align-items: center;
+   
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.switch input:checked + .switch-slider 
+{
+   background-color: #2196F3;
+}
+
+.switch .switch-slider.darking
+{
+   background-color: #2196F3;
+}
+
+.switch input:checked + .switch-slider.darking 
+{
+   background-color: #ccc;
+}
+
+.switch .switch-slider .switch-button
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   position: absolute;
+   
+   width: 26px;
+   height: 26px;
+   border-radius: 50%;
+   background-color: #fff;
+
+   transition: all 0.3s;
+}
+
+.switch .switch-slider .switch-button.lighting
+{
+   left: 4px;
+}
+
+.switch .switch-slider .switch-button.darking
+{
+   right: 4px;
+}
+
+.switch input:checked + .switch-slider .switch-button 
+{
+   /* move left to right */
+   transform: translateX(calc(70px - 4*2px - 26px));
+}
+
+.switch input:checked + .switch-slider .switch-button.darking
+{
+   /* move right to left */
+   transform: translateX(calc(-70px + 4*2px + 26px));
+}
+
+.switch .switch-slider .switch-button .inner-icon
+{
+   font-size: 20px;
+   width: 1em;
+   height: 1em;
+}
+
+/* nho hon 576 */
+@media (max-width: 575.98px)
+{
+   .switch 
+   {
+      width: 60px;
+      height: 28px;
+   }
+
+   .switch .switch-slider .switch-button
+   {
+      width: 20px;
+      height: 20px;
+   }
+
+   .switch input:checked + .switch-slider .switch-button 
+   {
+      transform: translateX(calc(60px - 4*2px - 20px));
+   }
+
+   .switch input:checked + .switch-slider .switch-button.darking
+   {
+      /* move right to left */
+      transform: translateX(calc(-60px + 4*2px + 20px));
+   }
+
+   .switch .switch-slider .switch-button .inner-icon
+   {
+      font-size: 14px;
+   }
+}
+
+/* End switch */
+
+
+/* box-head */
+
+.box-head
+{
+   max-width: 600px;
+}
+
+.box-head.box-center
+{
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+.box-head .inner-sub-title
+{
+   font-size: 18px;
+   font-weight: bold;
+   color: var(--color-text);
+}
+
+.box-head .inner-title
+{
+   font-weight: bold;
+   color: #000;
+}
+
+.box-head .inner-title.text-large
+{
+   font-size: 50px;
+}
+
+/* nho hon 992 */
+@media (max-width: 991.98px)
+{
+   .box-head .inner-title.text-large
+   {
+      font-size: 45px;
+   }
+}
+
+/* nho hon 768 */
+@media (max-width: 767.98px)
+{
+   .box-head .inner-title.text-large
+   {
+      font-size: 45px;
+   }
+}
+
+/* nho hon 576 */
+@media (max-width: 575.98px)
+{
+   .box-head .inner-sub-title
+   {
+      font-size: 16px;
+   }
+
+   .box-head .inner-title.text-large
+   {
+      font-size: 35px;
+   }
+}
+
+/* End box-head */
