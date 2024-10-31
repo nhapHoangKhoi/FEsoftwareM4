@@ -19,8 +19,9 @@
    --color-dark-text-white: rgb(243, 244, 246);
    --color-dark-text-light: #8b8b8b;
    --color-dark-background: rgb(17, 24, 39);
+   --color-dark-background-light-gray: #cfcfcf;
    /* --color-background-light-black: #31363B; */
-   /* --color-background-light-ocean: #DCE8EB; */
+   --color-dark-background-light-ocean: #bbd4d8;
    /* --color-background-dark-black: #14191E; */
    
    --font-text: "DM Sans", sans-serif;
