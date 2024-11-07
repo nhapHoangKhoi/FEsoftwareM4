@@ -1,15 +1,15 @@
 // ----- Menu for mobile
-const menuMobility = document.querySelector(".inner-menu-mobility");
+const menuMobile = document.querySelector(".inner-menu-mobile");
 
-if(menuMobility)
+if(menuMobile)
 {
-   const menuMobilityIcon = menuMobility.querySelector(".inner-button");
-   const backdrop = menuMobility.querySelector(".inner-backdrop");
-   const menuSider = menuMobility.querySelector(".menu-sider");
+   const menuMobileIcon = menuMobile.querySelector(".inner-button");
+   const backdrop = menuMobile.querySelector(".inner-backdrop");
+   const menuSider = menuMobile.querySelector(".menu-sider");
 
-   menuMobilityIcon.addEventListener("click", () => 
+   menuMobileIcon.addEventListener("click", () => 
       {
-         menuMobilityIcon.classList.toggle("open");
+         menuMobileIcon.classList.toggle("open");
          backdrop.classList.toggle("open");
          menuSider.classList.toggle("open");
       }
@@ -17,7 +17,7 @@ if(menuMobility)
 
    backdrop.addEventListener("click", () => 
       {
-         menuMobilityIcon.classList.remove("open");
+         menuMobileIcon.classList.remove("open");
          backdrop.classList.remove("open");
          menuSider.classList.remove("open");
       }
