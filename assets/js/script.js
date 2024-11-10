@@ -76,6 +76,62 @@ if(switchThemeSlider && htmlTag)
 // ----- End switch theme
 
 
+// ----- Tour promotion swiper
+const tourPromotions = document.querySelector(".tour-promotions");
+
+if(tourPromotions)
+{
+   const myButtonPrev = document.querySelector(".section-promotion .inner-right-group .inner-previous-button");
+   const swiperButtonPrev = tourPromotions.querySelector(".swiper-button-prev");
+   const myButtonNext = document.querySelector(".section-promotion .inner-right-group .inner-next-button");
+   const swiperButtonNext = tourPromotions.querySelector(".swiper-button-next");
+
+   myButtonPrev.addEventListener("click", () => {
+      swiperButtonPrev.click();
+   });
+
+   myButtonNext.addEventListener("click", () => {
+      swiperButtonNext.click();
+   });
+
+   const swiper = new Swiper(".tour-promotions", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      rewind: true,
+      autoplay: {
+         delay: 1500,
+         disableOnInteraction: false,
+      },
+      pagination: {
+         el: ".swiper-pagination",
+         clickable: true,
+      },
+      navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+         // when window width is >= 576px
+         576: {
+            slidesPerView: 1,
+            spaceBetween: 0
+         },
+         // when window width is >= 992px
+         992: {
+            slidesPerView: 2,
+            spaceBetween: 20
+         },
+         // when window width is >= 1200px
+         1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+         },
+      }
+   });
+}
+// ----- End tour promotion swiper
+
+
 // ----- Video modal
 const sectionVideo = document.querySelector(".video-clip");
 
