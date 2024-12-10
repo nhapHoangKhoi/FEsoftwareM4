@@ -1,3 +1,5 @@
+AOS.init();
+
 // ----- Countdown-datetime
 const countdownElement = document.querySelector(".countdown-datetime");
 
