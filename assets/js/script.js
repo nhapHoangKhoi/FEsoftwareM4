@@ -242,6 +242,7 @@ if(sectionVideo)
             backdrop.classList.remove("open");
             buttonCloseModal.classList.remove("on");
             header.classList.remove("hidden");
+            videoWrapper.classList.remove("open");
             
             setTimeout(() => {
                videoModal.classList.remove("open");
