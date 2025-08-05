@@ -1504,7 +1504,7 @@ header .inner-wrap .inner-menu-mobile .inner-button.open .button-background .bar
    right: 100%;
    transform: translateY(-50%);
 
-   aspect-ratio: 1/2;
+   width: 19px; /* aspect-ratio: 1/2 */
    height: 38px;
    background-color: #000;
    border-radius: 38px 0 0 38px;
@@ -1533,7 +1533,7 @@ header .inner-wrap .inner-menu-mobile .inner-button.open .button-background .bar
    left: 100%;
    transform: translateY(-50%);
 
-   aspect-ratio: 1/2;
+   width: 19px; /* aspect-ratio: 1/2 */
    height: 38px;
    background-color: #000;
    border-radius: 0 38px 38px 0;
